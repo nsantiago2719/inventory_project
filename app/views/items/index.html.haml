@@ -1,1 +1,4 @@
-hello world
+=link_to "create item", new_item_path
+
+-for i in @items
+  =link_to i.name, item_path(i.id)
