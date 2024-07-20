@@ -1,0 +1,8 @@
+%tr{id: dom_id(item)}
+  %td
+    =item.name
+  %td
+    =link_to edit_item_path(item.id), class: "no-underline" do
+      =heroicon "cog", variant: "outline"
+    =link_to item_path(item.id), data: { turbo_method: :delete }, class: "no-underline" do
+      =heroicon "trash", variant: "outline"

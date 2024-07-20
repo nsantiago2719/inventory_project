@@ -27,14 +27,18 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to @item
+      redirect_to items_path
     else
       render :new
     end
   end
 
   def destroy
-    Item.find(params[:id]).destroy
+    @item = Item.find(params[:id]).destroy
+
+    respond_to do |format|
+      format.turbo_stream
+    end
   end
 
   private
