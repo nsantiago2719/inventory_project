@@ -6,5 +6,5 @@
     %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
     = csrf_meta_tags
     = stylesheet_link_tag "tailwind", "inter-font", data: { turbo_track: "reload" }
-  %body
+  %body.mx-auto.prose
     = yield
