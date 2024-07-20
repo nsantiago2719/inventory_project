@@ -1,6 +1,6 @@
 %tr{id: dom_id(item)}
   %td
-    =item.name
+    = link_to item.name, item_path(item.id), class: "no-underline text-blue-500"
   %td
     =item.total_item
   %td

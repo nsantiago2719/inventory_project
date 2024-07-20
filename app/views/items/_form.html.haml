@@ -1,8 +1,15 @@
-=form_with model: @item do |f|
-  =f.label :name
-  =f.text_field :name
-  =f.label :description
-  =f.text_area :description
-  =f.label :total_item
-  =f.number_field :total_item
-  =f.submit "Submit"
+=form_with model: @item, class: "grid grid-cols-1 gap-6" do |f|
+  %label.block
+    =f.label :name
+    =f.text_field :name, placeholder: "Item Name", class: "block w-full"
+
+  %label.block
+    =f.label :description
+    =f.text_area :description, class: "w-full block"
+
+  %label.block
+    =f.label :total_item
+    =f.number_field :total_item, placeholder: "Total items", class: "w-full block"
+
+  %label.block
+    =f.submit "Submit", class: "w-full block bg-blue-500 rounded text-blue-100 px-4 py-2"

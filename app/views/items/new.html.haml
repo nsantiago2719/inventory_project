@@ -1,2 +1,9 @@
-=link_to "Items", items_path
+.flex.flex-row
+  %div{class: "basis-1/2"}
+    %h2
+      Create new item
+  %div{class: "basis-1/2 text-right"}
+    .my-12
+      =link_to "Back to items", items_path
+
 =render partial: "items/form", locals: { item: @item }
