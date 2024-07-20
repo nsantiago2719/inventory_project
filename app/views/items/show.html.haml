@@ -1,3 +1,17 @@
-=link_to "Items", items_path
-=@item.name
-=link_to "edit", edit_item_path(@item.id)
+.flex.flex-row
+  %div{class: "basis-1/2"}
+    %h2=@item.name
+  %div{class: "basis-1/2 text-right "}
+    .my-12
+      = link_to "Back to items", items_path
+
+.grid.grid-cols.gap-6
+  %label.block
+    %label Description
+    = text_area_tag :description, @item.description, class: "w-full block", disabled: true
+  %label.block
+    %label Total Item
+    = number_field_tag :total_item, @item.total_item, class: "w-full block", disabled: true
+  %label.block
+    = tailwind_button("Edit item", edit_item_path(@item.id), additional_class="w-full block text-center") 
+  
