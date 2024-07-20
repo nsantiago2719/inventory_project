@@ -1,4 +1,12 @@
-=link_to "create item", new_item_path
+.flex.flex-row
+  %div{class: "basis-1/2"}
+    %h2
+      Items
+  %div{class: "basis-1/2 text-right "}
+    .my-12
+      =tailwind_button "Create Item", new_item_path
 
--for i in @items
-  =link_to i.name, item_path(i.id)
+%ul.list-none
+  -for i in @items
+    %li
+      =link_to i.name, item_path(i.id)
