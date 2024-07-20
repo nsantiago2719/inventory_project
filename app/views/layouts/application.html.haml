@@ -1,10 +1,10 @@
 !!!
 %html
   %head
-    %meta{content: "text/html; charset=UTF-8", http_equiv: "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
     %title Inventory
     %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
     = csrf_meta_tags
-    = stylesheet_link_tag "application", data_turbo_track: "reload"
+    = stylesheet_link_tag "tailwind", "inter-font", data: { turbo_track: "reload" }
   %body
     = yield
