@@ -1,0 +1,5 @@
+- flash.each do |flash_type, message|
+  .absolute.top-8.right-10.rounded-lg.border-solid.border-2.bg-green-300.animate-pulse{data: {controller: "notif", action: "animationiteration->notif#remove"}}
+    .w-80.h-14
+      %p.mx-5.my-7.text-green-950
+        = message

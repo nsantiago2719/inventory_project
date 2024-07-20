@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id]).destroy
 
     respond_to do |format|
-      format.turbo_stream
+      format.turbo_stream { flash.now[:notice] = "#{@item.name} successfully deleted!"}
     end
   end
 

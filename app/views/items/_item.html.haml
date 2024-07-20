@@ -2,7 +2,10 @@
   %td
     =item.name
   %td
-    =link_to edit_item_path(item.id), class: "no-underline" do
-      =heroicon "cog", variant: "outline"
-    =link_to item_path(item.id), data: { turbo_method: :delete }, class: "no-underline" do
-      =heroicon "trash", variant: "outline"
+    =item.total_item
+  %td
+    .flex.justify-center
+      =link_to edit_item_path(item.id), class: "no-underline" do
+        =heroicon "cog", variant: "outline"
+      =link_to item_path(item.id), data: { turbo_method: :delete }, class: "no-underline" do
+        =heroicon "trash", variant: "outline"
