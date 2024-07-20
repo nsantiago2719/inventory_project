@@ -6,7 +6,21 @@
     .my-12
       =tailwind_button "Create Item", new_item_path
 
-%ul.list-none
-  -for i in @items
-    %li
-      =link_to i.name, item_path(i.id)
+%table.table-auto
+  %thead
+    %tr
+      %th Item Name
+      %th Actions
+  %tbody
+    -for item in @items
+      %tr
+        %td
+          =item.name
+        %td
+          =link_to edit_item_path(item.id), class: "no-underline" do
+            =heroicon "cog", variant: "outline"
+          =link_to item_path(item.id), data: { turbo_method: :delete }, class: "no-underline" do
+            =heroicon "trash", variant: "outline"
+          
+
+
