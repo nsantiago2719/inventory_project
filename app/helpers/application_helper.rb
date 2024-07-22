@@ -10,4 +10,14 @@ module ApplicationHelper
       ["bg-red-300", "text-red-950"]
     end
   end
+
+  def current_user
+    Current.user
+  end
+
+  def current_user?
+    Current.user.present?
+  end
+
+
 end
