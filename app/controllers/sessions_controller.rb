@@ -22,11 +22,11 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    @session.destroy; redirect_to(sessions_path, notice: "That session has been logged out")
+    @session.destroy; redirect_to(root_path, notice: "That session has been logged out")
   end
 
   private
     def set_session
-      @session = Current.user.sessions.find(params[:id])
+      @session = Session.find_by_id(cookies.signed[:session_token])
     end
 end
