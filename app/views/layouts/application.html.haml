@@ -8,7 +8,10 @@
     = stylesheet_link_tag "tailwind", "inter-font", data: { turbo_track: "reload" }
     = javascript_importmap_tags
 
-  %body.mx-auto.prose
-    = yield
+  %body
+    = render partial: "layouts/nav_bar"
+    .mx-auto.prose.max-w-7xl.px-2.sm:px-6.lg:px-8
+      = yield
     .flash#flash
+      = render "layouts/notif"
 
