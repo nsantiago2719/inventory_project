@@ -1,6 +1,6 @@
 module ApplicationHelper
   def tailwind_button(name, path)
-    link_to name, path, class: "bg-blue-500 rounded no-underline text-white px-4 py-2 rounded-md font-semibold shadow-sm w-full block text-center"
+    link_to name, path, class: "bg-blue-500 no-underline text-white px-4 py-2 font-semibold shadow-sm w-full block text-center"
   end
 
   def notif_color(flash_type)
