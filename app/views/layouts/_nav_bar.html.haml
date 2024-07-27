@@ -9,6 +9,6 @@
             = link_to "Item Management", root_path, class: "font-semibold text-white no-underline"
       .absolute.inset-y-0.right-0.flex.items-center.pr-2.sm:static.sm:inset-auto.sm:ml-6.sm:pr-0
         - if Current.session.present?
-          = link_to "Sign Out", sign_out_path, data: { "turbo-method": "DELETE"}, class: "bg-blue-500 rounded no-underline text-blue-100 px-4 py-2"
+          = link_to "Sign Out", sign_out_path, data: { "turbo-method": "delete"}, class: "bg-blue-500 no-underline text-blue-100 px-4 py-2"
         - else
           = tailwind_button("Login", sign_in_path)

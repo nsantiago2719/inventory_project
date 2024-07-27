@@ -1,8 +1,11 @@
-%p{:style => "color: red"}= alert
-%h1 Forgot your password?
-= form_with(url: identity_password_reset_path) do |form|
-  %div
-    = form.label :email, style: "display: block"
-    = form.email_field :email, required: true, autofocus: true
-  %div
-    = form.submit "Send password reset email"
+.flex.min-h-full.flex-col.justify-center.px-6.py-12.lg:px-8.shadow-md.mt-20.lg:mx-80.md:mx-40.mx-10
+  .sm:mx-auto.sm:w-full.sm:max-w-sm
+    =image_tag "https://tailwindui.com/img/logos/mark.svg?color=blue&shade=600", alt: "inventory", class: "mx-auto h-10 w-auto"
+    %h2.mt-10.text-center.text-2xl.font-bold.leading-9.tracking-tight.text-gray-900 Reset Password
+  .mt-10.sm:mx-auto.sm:w-full.sm:max-w-sm
+    = form_with(url: identity_password_reset_path) do |form|
+      %div
+        = form.label :email, class: "block text-sm font-medium leading-6 text-gray-900"
+        = form.email_field :password, required: true, class: "block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+      %div
+        = form.submit "Send link", class: "flex w-full justify-center bg-blue-500 px-3 py-1.5 text-sm mt-10 font-semibold leading-6 text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
