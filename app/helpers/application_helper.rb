@@ -7,7 +7,7 @@ module ApplicationHelper
     if flash_type == "notice"
       ["bg-green-300", "text-green-950"]
     else
-      ["bg-red-300", "text-red-950"]
+      ["bg-rose-300", "text-rose-950"]
     end
   end
 
