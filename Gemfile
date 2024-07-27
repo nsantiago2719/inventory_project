@@ -68,3 +68,5 @@ gem "authentication-zero", "~> 3.0.1"
 gem "bcrypt", "~> 3.1.7"
 
 gem 'html2haml'
+
+gem "image_processing", "~> 1.13"

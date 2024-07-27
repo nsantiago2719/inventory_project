@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     if @item.update!(item_params)
       redirect_to @item
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to items_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
