@@ -9,3 +9,6 @@ eagerLoadControllersFrom("controllers", application)
 
 import NotifController from "./notif_controller"
 application.register("notif", NotifController)
+
+import UserMenuController from "./user_menu_controller"
+application.register("user-menu", UserMenuController)
